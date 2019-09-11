@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoinFlipppppper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Heads or Tails!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBz-ty-AeF">
+                                <rect key="frame" x="42.5" y="94" width="329.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loF-9U-7D4">
+                                <rect key="frame" x="57" y="542" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="SEC-zS-ZAZ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="tails"/>
+                                <connections>
+                                    <action selector="tailsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4nP-dh-Z9C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98Z-UD-I1y">
+                                <rect key="frame" x="57" y="192" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="mg0-76-WRT"/>
+                                    <constraint firstAttribute="width" constant="300" id="rjn-5i-wEg"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="heads"/>
+                                <connections>
+                                    <action selector="headsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iJv-cq-ne1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LBz-ty-AeF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="12K-ZR-daW"/>
+                            <constraint firstItem="98Z-UD-I1y" firstAttribute="top" secondItem="LBz-ty-AeF" secondAttribute="bottom" constant="50" id="92P-Pw-N3c"/>
+                            <constraint firstItem="98Z-UD-I1y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CiI-Fi-nxZ"/>
+                            <constraint firstItem="LBz-ty-AeF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="HNU-vR-HVS"/>
+                            <constraint firstItem="loF-9U-7D4" firstAttribute="top" secondItem="98Z-UD-I1y" secondAttribute="bottom" constant="50" id="MAj-jO-HVd"/>
+                            <constraint firstItem="loF-9U-7D4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mvt-VQ-DQh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <segue destination="7Ac-dY-JKf" kind="show" identifier="toResultsVC" id="j8O-Il-rsg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="QYS-sz-p3X">
+            <objects>
+                <viewController id="7Ac-dY-JKf" customClass="ResultsViewController" customModule="CoinFlipppppper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="16E-4t-sqo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your result was x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4j-hz-mXy">
+                                <rect key="frame" x="86" y="427.5" width="242.5" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="K4j-hz-mXy" firstAttribute="centerX" secondItem="16E-4t-sqo" secondAttribute="centerX" id="QPs-qB-MxD"/>
+                            <constraint firstItem="K4j-hz-mXy" firstAttribute="centerY" secondItem="16E-4t-sqo" secondAttribute="centerY" id="kzd-1x-Rir"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QAF-ik-L8s"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultsLabel" destination="K4j-hz-mXy" id="V5Q-ce-W5i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aq6-bb-NeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="925" y="21"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heads" width="954" height="954"/>
+        <image name="tails" width="300" height="300"/>
+    </resources>
+</document>

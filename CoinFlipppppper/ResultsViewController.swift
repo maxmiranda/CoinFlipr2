@@ -12,10 +12,13 @@ class ResultsViewController: UIViewController {
 
     @IBOutlet weak var resultsLabel: UILabel!
     
+    var mainVC: ViewController!
+    
     var faceSelected: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = false
         // Do any additional setup after loading the view.
         let randomNumber = arc4random_uniform(10)
         var correctFace : String
@@ -29,7 +32,7 @@ class ResultsViewController: UIViewController {
         } else {
             resultsLabel.text = "You're wrong, it was \(correctFace)"
         }
-        
+        mainVC.selectedFaces.append(faceSelected)
+        mainVC.correctFaces.append(correctFace)
     }
-
 }

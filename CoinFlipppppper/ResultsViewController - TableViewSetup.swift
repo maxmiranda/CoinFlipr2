@@ -24,6 +24,6 @@ extension ResultsViewController: UITableViewDataSource {
 
 extension ResultsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return Constants.tableViewCellHeight
+        return 50
     }
 }
